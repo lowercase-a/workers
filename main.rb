@@ -3,7 +3,7 @@ require './employee.rb'
 require './manager'
 require_relative 'intern.rb'
 
-employee1 = Employee.new(
+employee1 = Actualize::Employee.new(
   {
     :last_name => "Campos",
     :salary => 70000,
@@ -18,7 +18,7 @@ employee1.give_annual_raise
 employee1.print_info
 
 # employee2 = Employee.new({:first_name => "Majora", :last_name => "Carter", :salary => 80000, :active => true})
-employee2 = Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: true)
+employee2 = Actualize::Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: true)
 employee2.print_info
 
 employee2.give_annual_raise
@@ -35,7 +35,7 @@ p "new name"
 p employee1.first_name
 
 
-manager = Manager.new(first_name: "Manny", last_name: "Bossman", salary: 100000, active: true, employees: [employee1, employee2])
+manager = Actualize::Manager.new(first_name: "Manny", last_name: "Bossman", salary: 100000, active: true, employees: [employee1, employee2])
 
 
 
@@ -55,7 +55,7 @@ p manager
 
 # an intern is like an employee and they can also send reports
 
-intern = Intern.new(first_name: "Ingid", last_name: "Isrignhausen", salary: 0, active: true)
+intern = Actualize::Intern.new(first_name: "Ingid", last_name: "Isrignhausen", salary: 0, active: true)
 
 intern.print_info
 intern.send_report
